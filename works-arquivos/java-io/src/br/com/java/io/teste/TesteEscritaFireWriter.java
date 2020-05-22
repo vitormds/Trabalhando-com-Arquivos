@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
-public class TesteEscrita2 {
+public class TesteEscritaFireWriter {
 
 	public static void main(String[] args) throws IOException {
 		// Fluxo de saida com Arquivo
