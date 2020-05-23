@@ -5,7 +5,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class TesteUnicodeEEncoding {
-
+// Encoding caso dar problema nos caracteres, adicionar no eclipse e no contrutor File, como mostrado no exemplo anterior
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		String s = "ç";
 		System.out.println(s.codePointAt(0));// unicode
