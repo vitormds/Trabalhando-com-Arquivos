@@ -11,7 +11,7 @@ public class TesteLeitura {
 	public static void main(String[] args) throws IOException {
 		// Fluxo de entrada com Arquivo
 		FileInputStream fis = new FileInputStream("lorem.txt");
-		InputStreamReader isr = new InputStreamReader(fis);
+		InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
 		BufferedReader bf = new BufferedReader(isr);
 		String linha = bf.readLine();
 		 

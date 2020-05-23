@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class TesteLeitura2 {
+public class FormatarValores {
 	
 	public static void main(String[] args) throws IOException {
-		Scanner scanner = new Scanner(new File("contas.csv"));
+		Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");
 		while(scanner.hasNext()) {
 			String linha = scanner.nextLine();
 			//System.out.println(linha);

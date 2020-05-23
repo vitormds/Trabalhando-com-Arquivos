@@ -8,7 +8,7 @@ public class TesteUnicodeEEncoding {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		String s = "ç";
-		System.out.println(s.codePointAt(0));
+		System.out.println(s.codePointAt(0));// unicode
 		
 		Charset c = Charset.defaultCharset();
 		System.out.println(c.displayName());
@@ -26,7 +26,7 @@ public class TesteUnicodeEEncoding {
 			
 			bytes = s.getBytes(StandardCharsets.US_ASCII);
 			System.out.print(bytes.length + ", US_ASCII, " );
-			 sNovo = new String(bytes);
+			 sNovo = new String(bytes, "US_ASCII");
 			System.out.println(sNovo);
 	}
 
