@@ -18,7 +18,7 @@ public class TesteEscritaFireWriter {
 		
 		BufferedWriter fw = new BufferedWriter(new FileWriter("lorem2.txt"));
 		fw.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ");
-		fw.write(System.lineSeparator());
+		fw.write(System.lineSeparator());// funciona /n para windows e linux
 		fw.write(System.lineSeparator());
 		fw.write("fim");
 		fw.close();
