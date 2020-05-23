@@ -11,18 +11,19 @@ public class TesteLeitura2 {
 		Scanner scanner = new Scanner(new File("contas.csv"));
 		while(scanner.hasNext()) {
 			String linha = scanner.nextLine();
-			System.out.println(linha);
+			//System.out.println(linha);
 			Scanner linhaScanner = new Scanner(linha);
 			linhaScanner.useLocale(Locale.US);
 			linhaScanner.useDelimiter(",");
 			
-			String v1 = linhaScanner.next();
-			int v2 = linhaScanner.nextInt();
-			int v3 = linhaScanner.nextInt();
-			String v4 = linhaScanner.next();
-			Double v5 = linhaScanner.nextDouble();
-			
-			System.out.println(v1 + v2 + v3 + v4 + v5);
+			String tipoConta = linhaScanner.next();
+			int agencia = linhaScanner.nextInt();
+			int numero = linhaScanner.nextInt();
+			String titular = linhaScanner.next();
+			double saldo = linhaScanner.nextDouble();
+			String valorFormatado = String.format(new Locale("pt", "BR"),"%s - %04d-%08d %20s: %010.2f", tipoConta,agencia,numero,titular,saldo);
+			System.out.println(valorFormatado);
+			//System.out.println(v1 +","+ v2 +","+ v3 +","+ v4 +","+ v5);
 			linhaScanner.close();
 
 			//String[] valores = linha.split(",");
