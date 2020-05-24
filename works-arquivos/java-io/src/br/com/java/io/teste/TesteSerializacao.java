@@ -11,7 +11,8 @@ import java.io.ObjectOutputStream;
 
 public class TesteSerializacao {
 	public static void main(String[] args) throws IOException, ClassNotFoundException   {
-		
+		// Caso tivesse outro objeto dentro de Cliente é necessario usar o transiet ex: private transient Cliente cliente
+		// para isolar a serializacao
 	 	Cliente c = new Cliente();
 	 	c.setNome("Vitor");
 	 	c.setProfissao("Dev");
