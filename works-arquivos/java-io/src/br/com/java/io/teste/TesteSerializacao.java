@@ -11,18 +11,20 @@ import java.io.ObjectOutputStream;
 
 public class TesteSerializacao {
 	public static void main(String[] args) throws IOException, ClassNotFoundException   {
-	String nome = "Vitor Souza";
-	ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("objeto.bin"));
-	oos.writeObject(nome);
-	oos.close();
-	
-	ObjectInputStream ois = new ObjectInputStream(new FileInputStream("objeto.bin"));
-	String n = (String) ois.readObject();
+		
+	 	Cliente c = new Cliente();
+	 	c.setNome("Vitor");
+	 	c.setProfissao("Dev");
+	 	c.setCpf("86133255577");
+	 	
+//	ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("cliente.bin"));
+//	oos.writeObject(c);
+//	oos.close();
+//	
+	ObjectInputStream ois = new ObjectInputStream(new FileInputStream("cliente.bin"));
+	Cliente cliente = (Cliente) ois.readObject();
 	ois.close();
-	System.out.println(n);
-	
-	
-	
+	System.out.println(cliente.getCpf());
 	}
 
 }
